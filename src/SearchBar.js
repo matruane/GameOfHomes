@@ -13,13 +13,16 @@ class SearchBar extends React.Component {
     this.onChange = (address) => this.setState({ address })
   }
 
-  handleFormSubmit = (event) => {
-    event.preventDefault()
+  handleEnter = (event) => {
 
     geocodeByAddress(this.state.address)
       .then(results => getLatLng(results[0]))
       .then(({ lat, lng }) => this.showResults( lat, lng))
     //  .catch(error => console.error('Error', error))
+  }
+
+  handleFormSubmit = (event) => {
+    
   }
 
 
@@ -35,13 +38,20 @@ class SearchBar extends React.Component {
     const options = {
       componentRestrictions: {country: 'nz'}
     }
+    const myStyles = {
+      input: { width: '50%',
+               backgroundColor: 'silver'
+              }
+    }
 
     return (
-      <form onSubmit={this.handleFormSubmit}>
+      <form>
         <PlacesAutocomplete
          inputProps={inputProps}
-         options={options} />
-        <button type="submit">Submit</button>
+         options={options}
+         styles={myStyles}
+         onEnterKeyDown={this.handleEnter}
+          />
       </form>
     )
   }
