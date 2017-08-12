@@ -1,34 +1,31 @@
 var goalLat = -41.286460;
 var goalLong = 174.776236;
 
+var disArray = []; //straightline distances of earth quakes to location km
+var magArray = []; //magnitude of earth quakes
+var depArray = []; //depth of earth quakes
+
 //1 degree = 111km
 
 //runs function when pgage has loaded
 $(function() {
-  // console.log will log a message or object to the browser developer console
-  console.log("page loaded...");
-  getQuakeInfo(calculateRating);
+  getQuakeInfo()
+    .then(extractEQInfo)
+    .then(calculateRating)
+    .then(updateFeedback);
 });
 
 
-function getQuakeInfo(callback) {
-
+function getQuakeInfo() {
     //returns 100 quakes within last year >= MMI of 5
-    var quakeInfo = $.get("https://api.geonet.org.nz/quake?MMI=5");
-
-    //runs function when quakeInfo query finishes
-    quakeInfo.done(function(quakeData) {
-      callback(quakeData);
-    });
+    return $.get("https://api.geonet.org.nz/quake?MMI=5");
 }
 
-//Takes all of the 100 earthquakes and finds a rating based on given latitude longitude of location
-function calculateRating(earthQuakes){
+//Takes all of the 100 earthquakes and feeds magnitude, distance and depth to lists
+function extractEQInfo(earthQuakes){
 
-    var disArray = []; //straightline distances of earth quakes to location km
-    var magArray = []; //magnitude of earth quakes
-    var depArray = []; //depth of earth quakes
-
+    console.log("Extracting E.Q Info");
+    
     for(var i = 0; i < 100; i++){
         var long = earthQuakes.features[i].geometry.coordinates[0];
         var lat = earthQuakes.features[i].geometry.coordinates[1];
@@ -42,4 +39,12 @@ function calculateRating(earthQuakes){
         magArray.push(earthQuakes.features[i].properties.magnitude);
         depArray.push(earthQuakes.features[i].properties.depth);
     }
+}
+
+function calculateRating(){
+    console.log("Calculating Rating");
+}
+
+function updateFeedback(){
+    console.log("Updating Feedback");
 }
