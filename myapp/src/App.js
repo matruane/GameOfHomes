@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import SearchBar from "./SearchBar"
+import ResultsTable from "./ResultsTable"
 import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+	constructor(props) {
+		super(props)
+	}
   render() {
     return (
       <div className="App">
@@ -16,6 +20,8 @@ class App extends Component {
         </p>
         <div>
       		<SearchBar />
+      	</div>
+      	<div id='results'>
       	</div>
       </div>
     );
