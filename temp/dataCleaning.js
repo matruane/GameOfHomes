@@ -1,5 +1,5 @@
-var goalLat = -42.40081//-41.286460;
-var goalLong = 173.681386//174.776236;
+var goalLat = -40.232815//-41.286460;
+var goalLong = -74.372381//174.776236;
 
 var disArray = []; //straightline distances of earth quakes to location km
 var magArray = []; //magnitude of earth quakes
@@ -44,6 +44,7 @@ function extractEQInfo(earthQuakes){
 function calculateRating(){
     var hitBy = 0; //amount of quakes 'hit' by
     var damage = 0; //total 'damage' taken from all quakes
+    var worstDamage = 8000;
 
     console.log("Calculating Rating");
 
@@ -76,7 +77,7 @@ function calculateRating(){
             hitBy++;
         }
     }
-
+    damage = damage/worstDamage;
     console.log(damage + ", " + hitBy);
 }
 
