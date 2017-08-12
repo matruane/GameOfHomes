@@ -83,15 +83,15 @@ function calculateRating(){
 function ColorPer(var Per){
   var color;
   if(Per >=.66){
-    color = 3;
+    color.style.color = "rgb(255, 0, 0)";
   }else if(Per >= .33){
-    color = 2;
+    color.style.color = "rgb(0, 255, 0)";
   }else{
-    color = 1;
+    color.style.color = "rgb(0, 0, 255)";
   }
 }
 
-function ColorPer(var PGrade){
+function ColorGrade(var PGrade){
   var Grade;
   if(PGrade <=.10){
     Grade = "A+";
