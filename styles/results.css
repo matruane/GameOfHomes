@@ -4,6 +4,13 @@
 	height: 100px;
 }
 
+.circle-text {
+	position: relative;
+	top: 35px;
+	left: 30px;
+	color: white;
+}
+
 .red {
 	background: red;
 }
