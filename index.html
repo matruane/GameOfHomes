@@ -9,6 +9,7 @@
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=API_KEY_HERE&libraries=places&sensors=false"></script>
 </head>
 <body>
 <div class="jumbotron jumbotron-fluid vertical-center">
@@ -16,7 +17,7 @@
   <div class="row search">
     <div class="col-lg-6">
       <div class="input-group">
-        <input type="text" class="form-control" placeholder="Enter your address...">
+        <input id="searchTextField" type="text" class="form-control" placeholder="Enter your address...">
         <span class="input-group-btn">
           <button class="btn btn-default" type="button">Go!</button>
         </span>
@@ -25,5 +26,6 @@
   </div><!-- /.row -->
   </div>
   </div>
+  <script type="text/javascript" src="js/googleAutoComplete.js"></script>
 </body>
 </html>
