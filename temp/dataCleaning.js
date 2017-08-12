@@ -80,6 +80,43 @@ function calculateRating(){
     damage = damage/worstDamage;
     console.log(damage + ", " + hitBy);
 }
+function ColorPer(var Per){
+  var color;
+  if(Per >=.66){
+    color = 3;
+  }else if(Per >= .33){
+    color = 2;
+  }else{
+    color = 1;
+  }
+}
+
+function ColorPer(var PGrade){
+  var Grade;
+  if(PGrade <=.10){
+    Grade = "A+";
+  }else if(PGrade <= .15){
+    color = "A";
+  }else if(PGrade <= .20){
+    color = "A-";
+  }else if(PGrade <= .25){
+    color = "B+";
+  }else if(PGrade <= .30){
+    color = "B";
+  }else if(PGrade <= .35){
+    color = "B-";
+  }else if(PGrade <= .40){
+    color = "C+";
+  }else if(PGrade <= .45){
+    color = "C";
+  }else if(PGrade <= .50){
+    color = "C-";
+  }else if(PGrade <= .75){
+    color = "E";
+  }else {
+    color = "F";
+  }
+}
 
 function updateFeedback(){
     console.log("Updating Feedback with rating: ");
