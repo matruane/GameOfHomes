@@ -110,7 +110,7 @@ top: 0;
 }
 .username{
   font-family: Righteous, sans-serif;
-  font-size: 1em;
+  font-size: 2em;
   font-weight: 600;
   color: white;
   letter-spacing: 2px;
@@ -135,10 +135,9 @@ top: 0;
 }
 .verdict_right{
 	width: 50%;
-	background-color: #ffffff;
 	height: inherit;
 	padding-left: 20px;
- padding-top: 40px;
+ padding-top: 60px;
 }
 .verdict_right p:first-of-type{
 	margin-top: 30px;
