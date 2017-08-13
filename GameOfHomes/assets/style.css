@@ -8,7 +8,7 @@
 }
 
 body{
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 .hero{
 	display: flex;
@@ -97,7 +97,6 @@ background: #505050;
 padding: 20px;
 display: flex;
 align-items: center;
-margin: 0 0 0px 0;
 justify-content: space-around;
 position: fixed;
 top: 0;
@@ -185,7 +184,7 @@ top: 0;
 }
 #colormeplease{
 	font-family: Roboto, sans-serif;
-	font-size: 1.8em;
+	font-size: 2em;
 	text-transform: uppercase;
 }
 /*-------------The Verdict-------------*/
