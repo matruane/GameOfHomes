@@ -5,15 +5,15 @@ class Results extends React.Component {
         super(props)
         this.lat = this.props.lat
         this.lng = this.props.lng
+
+        this.state = {damage: 0};
     }
-
-
-goalLat = this.lat//-41.286460;
-goalLong = this.long//174.776236;
 
 disArray = []; //straightline distances of earth quakes to location km
 magArray = []; //magnitude of earth quakes
 depArray = []; //depth of earth quakes
+
+damage = 0;
 
 //1 degree = 111km
 
@@ -44,8 +44,9 @@ extractEQInfo(earthQuakes){
         var lat = earthQuakes.features[i].geometry.coordinates[1];
         //console.log(long);
 
-        var longDif = this.goalLong - long;
-        var latDif = this.goalLat - lat;
+        var longDif = this.lng - long;
+        var latDif = this.lat - lat;
+        console.log(longDif +" lon, "  + latDif + " lat")
         var straightDis = Math.sqrt(Math.pow(longDif,2)+Math.pow(latDif,2));
         straightDis = straightDis * 111;
 
@@ -60,7 +61,7 @@ extractEQInfo(earthQuakes){
 
 calculateRating(){
     var hitBy = 0; //amount of quakes 'hit' by
-    var damage = 0; //total 'damage' taken from all quakes
+    var damageVal = 0; //total 'damage' taken from all quakes
     var worstDamage = 8000;
 
 
@@ -78,11 +79,11 @@ calculateRating(){
 
         //Not hit by quake
         if(distanceFromQuake > radius) {
-            damage += 0;
+            damageVal += 0;
         }
         //In the outer 90% of quake radius
         else if(distanceFromQuake  > radius*0.1){
-            damage += (distanceFromEdge)/10;
+            damageVal += (distanceFromEdge)/10;
             hitBy++;
         }
         //Inside the inner 10% of quake radius
@@ -91,13 +92,16 @@ calculateRating(){
             var yShift = (radius*0.9)/10;
             var xShift = radius*2.7; //90% * graient = 2.7 for x movement
 
-            damage += (3*distanceFromEdge + yShift) - xShift;
+            damageVal += (3*distanceFromEdge + yShift) - xShift;
 
             hitBy++;
         }
             }
-    damage = damage/worstDamage;
-    console.log(damage + ", " + hitBy);
+    damageVal = damageVal/worstDamage;
+    console.log(damageVal + ", " + hitBy);
+    //this.damage = damageVal;
+
+    this.setState({damage: damageVal});
 }
 
 updateFeedback(){
@@ -107,7 +111,7 @@ updateFeedback(){
 render() {
     return(
             <div>
-                Damage: {this.damage}
+                Damage: {this.state.damage}
             </div>
         )
 }
