@@ -103,6 +103,7 @@ function ColorPer(Per){
     var element1 = document.getElementById("js_targetme").innerHTML ="LIGHT";
     var num = Per.toFixed(2)*100;
     var element2 = document.getElementById("Percentage").innerHTML = num.toString() + "% Damage Rating";
+    //description
 
   }
 }

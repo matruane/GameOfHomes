@@ -8,7 +8,7 @@
 }
 
 body{
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 .hero{
 	display: flex;
@@ -53,8 +53,7 @@ body{
 .hero p{
   font-size: 2em;
   margin-bottom: 20px;
-  color: #7f7f7f;
-margin-top: -10px;}
+  color: #7f7f7f;}
 
 @media (max-width: 600px){
 
@@ -80,12 +79,11 @@ margin-top: -10px;}
 }
 .hero .searchButton {
   position: absolute;
-  right: 10px;
+  left: 10px;
   cursor: pointer;
   color: #000000;
   background: none;
   border: none;
-
 }
 .hero .fa-search{
     font-size: 2em;
@@ -110,18 +108,13 @@ top: 0;
 .search input {
   width: 100%;
 }
-#username{
+.username{
   font-family: Righteous, sans-serif;
   font-size: 2em;
   font-weight: 600;
   color: white;
   letter-spacing: 2px;
-	text-decoration: none;
 }
-#username:hover{
-	color: #ffc924;
-}
-
 .verdict_left{
 	width: 50%;
 	height: 100vh;
@@ -154,26 +147,12 @@ top: 0;
 .verdict_right p{
 	text-align: left;
 }
-
-.verdict_right p::first-letter{
-	color: red;
-}
 .verdict_right h2{
 	font-size: 3em;
-	padding-top: 40px;
-	font-weight: 200;
-}
-
-.verdict_right h3{
-	font-size: 4.5em;
-	margin-top: -10px;
-
+	padding-top: 30px;
 }
 .verdict_right .main_content{
-	font-family: Roboto, sans-serif;
 	margin-top: 30px;
-	width: 80%;
-	color: #58595b;
 }
 
 /*-------------The Verdict-------------*/
@@ -182,8 +161,8 @@ top: 0;
 	transition: all .2s ease-in-out;
 }
 .Heavey-Text{
-	background-color: rgb(233,74,75);
-	transition: all .2s ease-in-out;
+	tex
+	TERRIBLE
 }
 .Moderate-Test{
 	background-color: rgb(249,160,30);
