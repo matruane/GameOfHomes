@@ -147,12 +147,27 @@ top: 0;
 .verdict_right p{
 	text-align: left;
 }
+
+#js_targetme {
+	font-size: 4.5em;
+	margin-top: -10px;
+	text-transform: uppercase;
+}
 .verdict_right h2{
 	font-size: 3em;
-	padding-top: 30px;
+	padding-top: 40px;
+	font-weight: 200;
 }
-.verdict_right .main_content{
+
+.verdict_right h3{
+	font-size: 4.5em;
+	margin-top: -10px;
+	text-transform: uppercase;
+}
+.main_content{
 	margin-top: 30px;
+	font-family: Roboto, sans-serif;
+	width: 80%;
 }
 
 /*-------------The Verdict-------------*/
@@ -160,10 +175,7 @@ top: 0;
 	background-color: rgb(233,74,75);
 	transition: all .2s ease-in-out;
 }
-.Heavey-Text{
-	tex
-	TERRIBLE
-}
+
 .Moderate-Test{
 	background-color: rgb(249,160,30);
 	transition: all .2s ease-in-out;
