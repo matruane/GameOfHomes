@@ -153,15 +153,15 @@ top: 0;
 }
 
 /*-------------The Verdict-------------*/
-.verdict_left .Heavy-Test{
+.Heavey-Test{
 	background-color: rgb(233,74,75);
 	transition: all .2s ease-in-out;
 }
-.verdict_left .Moderate-Test{
+.Moderate-Test{
 	background-color: rgb(249,160,30);
 	transition: all .2s ease-in-out;
 }
-.verdict_left .Light-Test{
+.Light-Test{
 	background-color: rgb(101,126,190);
 	transition: all .2s ease-in-out;
 }
