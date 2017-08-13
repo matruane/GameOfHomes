@@ -85,7 +85,7 @@ function ColorPer(Per){
   var color;
   if(Per >=.66){
     var element = document.body;
-    element.classList.add("Heavey-Test");
+    element.classList.add("Heavy-Test");
   }else if(Per >= .33){
       var element = document.body;
     element.classList.add("Moderate-Test");
