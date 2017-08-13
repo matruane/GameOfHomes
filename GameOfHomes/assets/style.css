@@ -101,3 +101,14 @@ flex: 1;
 .search input {
   width: 100%;
 }
+
+/*-------------JSSTUFF-------------*/
+.Damage-Heavy{
+	background-color: rgb(233,74,75);
+}
+.Damage-moderate{
+	background-color: rgb(249,160,30);
+}
+.Damage-light{
+	background-color: rgb(101,126,190);
+}
