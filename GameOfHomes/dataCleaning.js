@@ -86,16 +86,23 @@ function ColorPer(Per){
   if(Per >=.66){
     var element = document.body;
     element.classList.add("Heavy-Test");
-    var element1 = document.getElementsById("js_targetme");
+    var element1 = document.getElementById("js_targetme").innerHTML ="HEAVY";
+    var num = Per.toFixed(2)*100;
+    var element2 = document.getElementById("Percentage").innerHTML = num.toString() + "% Damage Rating";
     element1.text("Test");
   //  element.classList.add("Heavy-Text");
   }else if(Per >= .33){
       var element = document.body;
     element.classList.add("Moderate-Test");
+    var element1 = document.getElementById("js_targetme").innerHTML ="MODERATE";
+    var num = Per.toFixed(2)*100;
+    var element2 = document.getElementById("Percentage").innerHTML = num.toString() + "% Damage Rating";
   }else{
     var element = document.body;
     element.classList.add("Light-Test");
-    var element1 = document.getElementById("js_targetme").innerHTML ="newtext";
+    var element1 = document.getElementById("js_targetme").innerHTML ="LIGHT";
+    var num = Per.toFixed(2)*100;
+    var element2 = document.getElementById("Percentage").innerHTML = num.toString() + "% Damage Rating";
 
   }
 }
