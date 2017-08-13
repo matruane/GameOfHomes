@@ -24,6 +24,7 @@ body{
 .flex_body{
 	display: flex;
 	align-items: center;
+	position: relative;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -38,7 +39,7 @@ body{
 .hero{
 	position: relative;
 	justify-content: center;
-	min-height: 100vh;
+	min-height: 50vh;
 	text-align: center; }
 
 .hero h1,p{
@@ -90,7 +91,7 @@ body{
 }
 
 /*-------------The Verdict-------------*/
-.bar{
+.navbar{
 width: 100%;
 background: #505050;
 padding: 20px;
@@ -98,7 +99,8 @@ display: flex;
 align-items: center;
 margin: 0 0 0px 0;
 justify-content: space-around;
-
+position: fixed;
+top: 0;
 }
 .search{
   width: 40%;
@@ -116,13 +118,23 @@ justify-content: space-around;
 .verdict_left{
 	width: 50%;
 	background-color: #fc5959;
-	height: 300px;
+	height: 100vh;
+
+}
+.verdict_left svg{
+	height: 100%;
+}
+.verdict_left h2{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
 }
 .verdict_right{
 	width: 50%;
 	background-color: #ffffff;
 	height: inherit;
 	padding-left: 20px;
+
 }
 .verdict_right p:first-of-type{
 	margin-top: 30px;
@@ -132,6 +144,7 @@ justify-content: space-around;
 }
 .verdict_right h2{
 	font-size: 3em;
+	padding-top: 30px;
 }
 .verdict_right .main_content{
 	margin-top: 30px;
