@@ -1,41 +1,18 @@
-var goalLat = -42.400817//-41.286460;
-var goalLong = 173.681386//174.776236;
+var goalLat = -42.400817
+var goalLong = 169.372381;
 
 var disArray = []; //straightline distances of earth quakes to location km
 var magArray = []; //magnitude of earth quakes
 var depArray = []; //depth of earth quakes
 
 //1 degree = 111km
-var geocoder = new google.maps.Geocoder();
-
-function geocodeUpdateDamage(geocoder) {
-    var searchTextField = document.getElementById('searchTextField').value;
-    geocoder.geocode({'address': searchTextField}, function(results, status) {
-        if (status === 'OK') {
-            var result = results[0];
-            var location = result.geometry.location;
-            console.log(location.lat(), location.lng());
-            goalLat = location.lat();
-            goalLng = location.lng();
-
-            getQuakeInfo()
-              .then(extractEQInfo)
-              .then(calculateRating)
-              .then(updateFeedback);
-
-        } else {
-            alert('Geocode was not successful for the following reason: ' + status);
-        }
-    });
-
-
-  }
 
 //runs function when pgage has loaded
 $(function() {
-    $('#input').on('click', function() {
-      geocodeUpdateDamage(geocoder);
-    });
+  getQuakeInfo()
+    .then(extractEQInfo)
+    .then(calculateRating)
+    .then(updateFeedback);
 });
 
 
@@ -101,20 +78,39 @@ function calculateRating(){
         }
     }
     damage = damage/worstDamage;
+    ColorPer(damage,hitBy);
     console.log(damage + ", " + hitBy);
 }
-function ColorPer(var Per){
+function ColorPer(Per,hitBy){
   var color;
   if(Per >=.66){
-    color.style.color = "rgb(255, 0, 0)";
+    var element = document.body;
+    element.classList.add("Heavy-Test");
+    var element1 = document.getElementById("js_targetme").innerHTML ="HEAVY";
+    var num = Per.toFixed(2)*100;
+    var element2 = document.getElementById("Percentage").innerHTML = num.toString() + "%";
+    var element3 = document.getElementById("description").innerHTML = "Your house is at risk! it has felt: " + hitBy.toString() +" Earthquakes within the last year";
+  //  element.classList.add("Heavy-Text");
   }else if(Per >= .33){
-    color.style.color = "rgb(0, 255, 0)";
+      var element = document.body;
+    element.classList.add("Moderate-Test");
+    var element1 = document.getElementById("js_targetme").innerHTML ="MODERATE";
+    var num = Per.toFixed(2)*100;
+    var element2 = document.getElementById("Percentage").innerHTML = num.toString() + "%";
+    var element3 = document.getElementById("description").innerHTML = "Your house is in a bit of riskit has felt: " + hitBy.toString() +" Earthquakes within the last year";;
   }else{
-    color.style.color = "rgb(0, 0, 255)";
+    var element = document.body;
+    element.classList.add("Light-Test");
+    var element1 = document.getElementById("js_targetme").innerHTML ="LIGHT";
+    var num = Per.toFixed(2)*100;
+    var element2 = document.getElementById("Percentage").innerHTML = num.toString() + "%";
+    var element3 = document.getElementById("description").innerHTML = "Your house is safe it has felt: " + hitBy.toString() +" Earthquakes within the last year";;
+    //description
+
   }
 }
 
-function ColorGrade(var PGrade){
+function ColorGrade(PGrade){
   var Grade;
   if(PGrade <=.10){
     Grade = "A+";
