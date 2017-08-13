@@ -155,7 +155,7 @@ top: 0;
 	text-align: left;
 }
 
-.verdict_right p::first-letter{
+#js_targetme p::first-letter{
 	color: red;
 }
 .verdict_right h2{
@@ -167,6 +167,7 @@ top: 0;
 .verdict_right h3{
 	font-size: 4.5em;
 	margin-top: -10px;
+	text-transform: uppercase;
 
 }
 .verdict_right .main_content{
