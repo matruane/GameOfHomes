@@ -1,0 +1,138 @@
+/*-------------General -------------*/
+@import url('https://fonts.googleapis.com/css?family=Righteous|Roboto:400,500,700,900');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+  font-family: 'Open Sans', sans-serif;
+}
+.hero{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 125px 100px;
+}
+.verdict{
+  display: flex;
+	align-items: row;
+  flex-direction: column;
+}
+.flex_body{
+	display: flex;
+	align-items: center;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+@media (max-width: 1000px){
+	section{
+		padding: 100px 50px;
+	}
+}
+
+/*-------------Hero Section -------------*/
+.hero{
+	position: relative;
+	justify-content: center;
+	min-height: 100vh;
+	text-align: center; }
+
+.hero h1,p{
+  font-family: Righteous, sans-serif;
+  text-align: center; }
+
+.hero h1{
+    font-size: 5em;
+    font-weight: 700;}
+
+.hero p{
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #7f7f7f;}
+
+@media (max-width: 600px){
+
+}
+
+/*-------------Search Button for front Screen-------------*/
+.hero .search {
+  width: 50%;
+  position: relative;
+}
+.hero .searchTerm {
+  float: left;
+  width: 100%;
+  padding: 5px;
+  height: 50px;
+  outline: none;
+  background-color: #c4c4c4;
+  border: 0px;
+}
+.hero .searchTerm:focus{
+  color: #000;
+  font-size: 30px;
+}
+.hero .searchButton {
+  position: absolute;
+  left: 10px;
+  cursor: pointer;
+  color: #000000;
+  background: none;
+  border: none;
+}
+.hero .fa-search{
+    font-size: 2em;
+    margin: 12px 0;
+}
+
+/*-------------The Verdict-------------*/
+.bar{
+width: 100%;
+background: #505050;
+padding: 20px;
+display: flex;
+align-items: center;
+margin: 0 0 0px 0;
+justify-content: space-around;
+
+}
+.search{
+  width: 40%;
+}
+.search input {
+  width: 80%;
+}
+.username{
+  font-family: Righteous, sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+  color: white;
+  letter-spacing: 2px;
+}
+.verdict_left{
+	width: 50%;
+	background-color: #fc5959;
+	height: 300px;
+}
+.verdict_right{
+	width: 50%;
+	background-color: #ffffff;
+	height: inherit;
+	padding-left: 20px;
+}
+.verdict_right p:first-of-type{
+	margin-top: 30px;
+}
+.verdict_right p{
+	text-align: left;
+}
+.verdict_right h2{
+	font-size: 3em;
+}
+.verdict_right .main_content{
+	margin-top: 30px;
+}
