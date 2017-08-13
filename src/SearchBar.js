@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import PlacesAutocomplete, { geocodeByAddress, getLatLng } from 'react-places-autocomplete'
 //import './SearchBar.css';
-import ResultsTable from './ResultsTable'
+import Results from './Results'
 import ReactDOM from 'react-dom';
 
 class SearchBar extends React.Component {
@@ -27,7 +27,7 @@ class SearchBar extends React.Component {
 
 
   showResults(lat, lng) {
-    ReactDOM.render(<ResultsTable address={this.state.address} lat={lat} lng={lng} />, document.getElementById('results'))
+    ReactDOM.render(<Results address={this.state.address} lat={lat} lng={lng} />, document.getElementById('results'))
   }
 
   render() {
