@@ -78,10 +78,10 @@ function calculateRating(){
         }
     }
     damage = damage/worstDamage;
-    ColorPer(damage);
+    ColorPer(damage,hitBy);
     console.log(damage + ", " + hitBy);
 }
-function ColorPer(Per){
+function ColorPer(Per,hitBy){
   var color;
   if(Per >=.66){
     var element = document.body;
@@ -89,7 +89,7 @@ function ColorPer(Per){
     var element1 = document.getElementById("js_targetme").innerHTML ="HEAVY";
     var num = Per.toFixed(2)*100;
     var element2 = document.getElementById("Percentage").innerHTML = num.toString() + "% Damage Rating";
-    element1.text("Test");
+    var element3 = document.getElementById("description").innerHTML = "Your house is at risk! it has felt: " + hitBy.toString() +" Earthquakes within the last year";
   //  element.classList.add("Heavy-Text");
   }else if(Per >= .33){
       var element = document.body;
@@ -97,12 +97,14 @@ function ColorPer(Per){
     var element1 = document.getElementById("js_targetme").innerHTML ="MODERATE";
     var num = Per.toFixed(2)*100;
     var element2 = document.getElementById("Percentage").innerHTML = num.toString() + "% Damage Rating";
+    var element3 = document.getElementById("description").innerHTML = "Your house is in a bit of riskit has felt: " + hitBy.toString() +" Earthquakes within the last year";;
   }else{
     var element = document.body;
     element.classList.add("Light-Test");
     var element1 = document.getElementById("js_targetme").innerHTML ="LIGHT";
     var num = Per.toFixed(2)*100;
     var element2 = document.getElementById("Percentage").innerHTML = num.toString() + "% Damage Rating";
+    var element3 = document.getElementById("description").innerHTML = "Your house is safe it has felt: " + hitBy.toString() +" Earthquakes within the last year";;
     //description
 
   }
