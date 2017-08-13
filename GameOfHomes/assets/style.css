@@ -160,6 +160,10 @@ top: 0;
 	background-color: rgb(233,74,75);
 	transition: all .2s ease-in-out;
 }
+.Heavey-Text{
+	background-color: rgb(233,74,75);
+	transition: all .2s ease-in-out;
+}
 .Moderate-Test{
 	background-color: rgb(249,160,30);
 	transition: all .2s ease-in-out;
