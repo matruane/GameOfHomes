@@ -23,8 +23,8 @@ body{
 }
 .flex_body{
 	display: flex;
-	align-items: center;
-	position: relative;
+	align-items: flex-start;
+
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -124,17 +124,21 @@ top: 0;
 .verdict_left svg{
 	height: 100%;
 }
-.verdict_left h2{
+.verdict_left a{
 	position: absolute;
-	bottom: 0px;
-	left: 0px;
+	bottom: 2%;
+	left: 2%;
+	text-decoration: none;
+	color: #000;
+	font-family: Righteous, sans-serif;
+	font-size: 2em;
 }
 .verdict_right{
 	width: 50%;
 	background-color: #ffffff;
 	height: inherit;
 	padding-left: 20px;
-
+ padding-top: 40px;
 }
 .verdict_right p:first-of-type{
 	margin-top: 30px;
