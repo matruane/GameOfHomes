@@ -70,7 +70,7 @@ body{
   padding: 5px;
   height: 50px;
   outline: none;
-  background-color: #c4c4c4;
+  background-color: #e0e0e0;
   border: 0px;
 }
 .hero .searchTerm:focus{
@@ -178,6 +178,7 @@ top: 0;
 }
 #description{
 	font-family: Roboto, sans-serif;
+	font-size: 1.2em;
 }
 /*-------------The Verdict-------------*/
 .Heavey-Test{
