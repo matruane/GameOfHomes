@@ -147,10 +147,11 @@ top: 0;
 .verdict_right p{
 	text-align: left;
 }
-<<<<<<< HEAD
 
-#js_targetme p::first-letter{
-	color: red;
+#js_targetme {
+	font-size: 4.5em;
+	margin-top: -10px;
+	text-transform: uppercase;
 }
 .verdict_right h2{
 	font-size: 3em;
@@ -163,14 +164,9 @@ top: 0;
 	margin-top: -10px;
 	text-transform: uppercase;
 
-=======
-.verdict_right h2{
-	font-size: 3em;
-	padding-top: 30px;
->>>>>>> ff1c9d877de1d59fe11002760e94d7e113f92915
-}
-.verdict_right .main_content{
+.main_content{
 	margin-top: 30px;
+	font-family: Roboto, sans-serif;
 }
 
 /*-------------The Verdict-------------*/
@@ -178,10 +174,7 @@ top: 0;
 	background-color: rgb(233,74,75);
 	transition: all .2s ease-in-out;
 }
-.Heavey-Text{
-	tex
-	TERRIBLE
-}
+
 .Moderate-Test{
 	background-color: rgb(249,160,30);
 	transition: all .2s ease-in-out;
