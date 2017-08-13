@@ -79,11 +79,12 @@ body{
 }
 .hero .searchButton {
   position: absolute;
-  left: 10px;
+  right: 10px;
   cursor: pointer;
   color: #000000;
   background: none;
   border: none;
+
 }
 .hero .fa-search{
     font-size: 2em;
