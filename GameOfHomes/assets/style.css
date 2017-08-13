@@ -117,7 +117,6 @@ top: 0;
 }
 .verdict_left{
 	width: 50%;
-	background-color: #fc5959;
 	height: 100vh;
 
 }
@@ -154,15 +153,15 @@ top: 0;
 }
 
 /*-------------The Verdict-------------*/
-.Heavey-Test{
+.verdict_left .Heavey-Test{
 	background-color: rgb(233,74,75);
 	transition: all .2s ease-in-out;
 }
-.Moderate-Test{
+.verdict_left .Moderate-Test{
 	background-color: rgb(249,160,30);
 	transition: all .2s ease-in-out;
 }
-.Light-Test{
+.verdict_left .Light-Test{
 	background-color: rgb(101,126,190);
 	transition: all .2s ease-in-out;
 }

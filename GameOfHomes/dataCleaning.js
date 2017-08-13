@@ -1,5 +1,5 @@
-var goalLat = -41.286460;
-var goalLong = 174.776236;
+var goalLat = -42.400817
+var goalLong = 169.372381;
 
 var disArray = []; //straightline distances of earth quakes to location km
 var magArray = []; //magnitude of earth quakes
@@ -84,13 +84,13 @@ function calculateRating(){
 function ColorPer(Per){
   var color;
   if(Per >=.66){
-    var element = document.body//document.getElementById(body);
+    var element = document.body;
     element.classList.add("Heavey-Test");
   }else if(Per >= .33){
-    var element = document.body//document.getElementById(body);
+      var element = document.body;
     element.classList.add("Moderate-Test");
   }else{
-    var element = document.body//document.getElementById(body);
+    var element = document.body;
     element.classList.add("Light-Test");
   }
 }
