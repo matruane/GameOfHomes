@@ -86,12 +86,17 @@ function ColorPer(Per){
   if(Per >=.66){
     var element = document.body;
     element.classList.add("Heavy-Test");
+    var element1 = document.getElementsById("js_targetme");
+    element1.text("Test");
+  //  element.classList.add("Heavy-Text");
   }else if(Per >= .33){
       var element = document.body;
     element.classList.add("Moderate-Test");
   }else{
     var element = document.body;
     element.classList.add("Light-Test");
+    var element1 = document.getElementById("js_targetme").innerHTML ="newtext";
+
   }
 }
 
