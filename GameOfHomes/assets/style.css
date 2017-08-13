@@ -116,7 +116,7 @@ top: 0;
   letter-spacing: 2px;
 	text-decoration: none;
 }
-#username{
+#username:hover{
 	color: #f2c94c;
 }
 .verdict_left{
