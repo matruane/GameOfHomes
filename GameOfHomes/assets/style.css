@@ -136,3 +136,17 @@ justify-content: space-around;
 .verdict_right .main_content{
 	margin-top: 30px;
 }
+
+/*-------------The Verdict-------------*/
+.Heavey-Test{
+	background-color: rgb(233,74,75);
+	transition: all .2s ease-in-out;
+}
+.Moderate-Test{
+	background-color: rgb(249,160,30);
+	transition: all .2s ease-in-out;
+}
+.Light-Test{
+	background-color: rgb(101,126,190);
+	transition: all .2s ease-in-out;
+}
