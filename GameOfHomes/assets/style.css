@@ -108,12 +108,16 @@ top: 0;
 .search input {
   width: 100%;
 }
-.username{
+#username{
   font-family: Righteous, sans-serif;
   font-size: 2em;
   font-weight: 600;
   color: white;
   letter-spacing: 2px;
+	text-decoration: none;
+}
+#username{
+	color: #f2c94c;
 }
 .verdict_left{
 	width: 50%;
