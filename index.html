@@ -8,6 +8,16 @@
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNU18r9_-0UQMiiUvirgvkZh-WXMPpqlE&libraries=places&sensors=false"></script>
   <link rel="stylesheet" href="assets/font-awesome.min.css">
   <link rel="stylesheet" href="assets/style.css">
+  <script src="jquery-3.2.1.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#submitButton').on('click', function(){
+        sessionStorage.setItem('address', document.getElementById('searchTextField').value);
+        console.log(sessionStorage.getItem('address'));
+        window.location = "verdict.html";
+        });
+      });
+  </script>
 
 </head>
 <body>
@@ -16,11 +26,10 @@
       <h1>FUTUREPROOF</h1>
       <p>Helping you find a safer home</p>
       <div class="search">
-        <input id="searchTextField"type="text" class="searchTerm" placeholder="">
-        <a href="verdict.html">
-        <button type="submit" class="searchButton">
+        <input id="searchTextField"type="text" class="searchTerm" placeholder="" />
+        <button type="submit" id="submitButton" class="searchButton" onClick=>
         <i class="fa fa-search" aria-hidden="true"></i>
-       </button> </a></div>
+       </button></div>
   </section>
 <script type="text/javascript" src="googleAutoComplete.js"></script>
 

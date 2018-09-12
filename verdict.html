@@ -10,6 +10,12 @@
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNU18r9_-0UQMiiUvirgvkZh-WXMPpqlE&libraries=places&sensors=false"></script>
   <script src="jquery-3.2.1.min.js"></script>
   <script src="dataCleaning.js"></script>
+  <script>
+  $(document).ready(function() {
+    $('#searchTextField').val(sessionStorage.getItem('address'));
+    $('#input').click();
+  });
+  </script>
 </head>
 <body>
   <section class="verdict">
