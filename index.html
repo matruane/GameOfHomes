@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>FutureProof</title>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNU18r9_-0UQMiiUvirgvkZh-WXMPpqlE&libraries=places&sensors=false"></script>
   <link rel="stylesheet" href="assets/font-awesome.min.css">
   <link rel="stylesheet" href="assets/style.css">
 
@@ -15,13 +16,13 @@
       <h1>FUTUREPROOF</h1>
       <p>Helping you find a safer home</p>
       <div class="search">
-        <input type="text" class="searchTerm" placeholder="">
+        <input id="searchTextField"type="text" class="searchTerm" placeholder="">
         <a href="verdict.html">
         <button type="submit" class="searchButton">
         <i class="fa fa-search" aria-hidden="true"></i>
        </button> </a></div>
   </section>
-
+<script type="text/javascript" src="googleAutoComplete.js"></script>
 
 </body>
 </html>

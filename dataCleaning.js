@@ -9,7 +9,7 @@ var depArray = []; //depth of earth quakes
 var geocoder = new google.maps.Geocoder();
 
 function geocodeUpdateDamage(geocoder) {
-    var search = document.getElementById('search').value;
+    var search = document.getElementById('searchTextField').value;
     geocoder.geocode({'address': search}, function(results, status) {
         if (status === 'OK') {
             var result = results[0];
@@ -49,7 +49,7 @@ function extractEQInfo(earthQuakes){
 
     console.log("Extracting E.Q Info");
 
-    for(var i = 0; i < 100; i++){
+    for(var i = 0; i < earthQuakes.features.length; i++){
         var long = earthQuakes.features[i].geometry.coordinates[0];
         var lat = earthQuakes.features[i].geometry.coordinates[1];
 
@@ -70,9 +70,10 @@ function calculateRating(){
     var worstDamage = 8000;
 
     console.log("Calculating Rating");
+    console.log(magArray.length);
 
     //radius - distance to plug into formula
-    for(var i=0; i<100; i++){
+    for(var i=0; i<magArray.length; i++){
 
         //radius around quake that it can be felt at
         var radius = (magArray.pop()*316/depArray.pop())*5;
